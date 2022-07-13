@@ -1,0 +1,55 @@
+body {
+    display: flex;
+    flex-flow: column nowrap;
+    flex: 1 0 auto;
+    margin: 0;
+}
+
+.header {
+    justify-content: space-between;
+    display: flex;
+    flex: 1;
+    background-color:rgb(43, 53, 67);
+}
+
+.content {
+    flex-flow: column nowrap;
+}
+
+.content .sub-title {
+    text-align: center;
+    font-weight: bold;
+    font-size: 30px;
+    font-family: 'Times New Roman', Times, serif;
+    padding: 42px;
+}
+
+.content .container {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+    padding: 24px 8px 64px;
+    gap: 100px;
+}
+
+.content .card {
+    flex-flow: column wrap;
+    width: 200px;
+    height: 200px;
+    padding: 24px;
+}
+
+.content img {
+    width: 200px;
+    height: 200px;
+    border-radius: 8px;
+    border: 3px solid blue;
+}
+
+.content .sub-info {
+    flex-flow: column wrap;
+    text-align: center;
+    padding: 12px;
+    font-size: 20px;
+    font-family: 'Times New Roman', Times, serif;
+}
