@@ -12,6 +12,20 @@ body {
     background-color:rgb(43, 53, 67);
 }
 
+.info .container {
+    display: flex;
+    flex: 1;
+    margin: 24px;
+    justify-content: center;
+    gap: 140px;    
+}
+
+.info p {
+    font-weight: bold;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 12px;
+}
+
 .content {
     flex-flow: column nowrap;
 }
