@@ -1,0 +1,13 @@
+ROCK-PAPER-SCISSORS Game Pseudocode:
+
+Prompt user for amount of rounds to win
+Track users wins and cpu wins
+Start a round (keep playing until user/cpu wins greater than rounds)
+    User selects RPS
+    Randomize CPU selection of RPS
+    Compare and find who wins or tie
+    Update score
+    Output who won the round
+Compare who's score is higher
+Finalize winner
+

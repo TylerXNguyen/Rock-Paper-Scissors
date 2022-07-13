@@ -1,6 +1,8 @@
 // main
-let rounds = 5
-console.log(game(rounds))
+let rounds = 1;
+//rounds = prompt("How many rounds to win?");
+console.log(game(rounds));
+
 
 function computerPlay() {
     // cpu randomly return either ‘Rock’, ‘Paper’ or ‘Scissors’
@@ -16,9 +18,26 @@ function computerPlay() {
     }
 }
 
+function userPlay() {
+    // retrieves user input from image click
+    const rockButton = document.querySelector("#rock");
+    rockButton.addEventListener("click", () => {
+        console.log("Rock");
+        return "Rock";
+    });
+    const paperButton = document.querySelector("#paper");
+    paperButton.addEventListener("click", () => {
+        console.log("Paper");
+        return "Paper";
+    });
+    const scissorsButton = document.querySelector("#scissors");
+    scissorsButton.addEventListener("click", () => {
+        console.log("Scissors");
+        return "Scissors";
+    });
+}
+
 function playRound(playerSelection, computerSelection) {
-    playerSelection = playerSelection.toLowerCase()
-    playerSelection = capitalize(playerSelection)
     // checks for tie, same choice
     if (playerSelection == computerSelection) {
         console.log("It's a tie. You both chose:\t" + playerSelection)
@@ -43,27 +62,20 @@ function playRound(playerSelection, computerSelection) {
     }
 }
 
-function capitalize(s) {
-    s = s.toLowerCase()
-    s = s.charAt(0).toUpperCase() + s.substr(1)
-    return s
-}
-
 function game(rounds) {
-    let player_wins = 0
-    let computer_wins = 0
-    // runs rounds
-    for (let i = 0; i < rounds; i++) {
-        console.log("\n---Round " + (i + 1) + "---")
-        // plays a round and updates score of winner
-        let computerSelection = computerPlay()
-        // prompts user for input
-        let playerSelection = prompt("Rock, Paper, or Scissors? ")
+    let player_wins = 0;
+    let computer_wins = 0;
+    // runs the rounds
+    while (player_wins < rounds && computer_wins < rounds) {
+        let playerSelection = userPlay();
+        let computerSelection = computerPlay();
         let round_winner = playRound(playerSelection, computerSelection);
         if (round_winner == 1) {
             player_wins++;
         } else if (round_winner == -1) {
             computer_wins++;
+        } else {
+
         }
     }
     if (player_wins > computer_wins) {
