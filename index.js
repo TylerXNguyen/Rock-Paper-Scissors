@@ -50,8 +50,10 @@ function playRound(playerSelection) {
         console.log("The Game is over");
         if (player_wins > computer_wins) {
             displayResult.textContent = "Congratulations! You won the game.";
+            displayResult.style.backgroundColor = "Green";
         } else {
             displayResult.textContent = "Sorry! The computer won the game.";
+            displayResult.style.backgroundColor = "Red";
         }
     }
     return 0;
